@@ -21,7 +21,9 @@ data = sales.get_all_values()
 
 def get_sales_data():
     """
-    Get sales figures input from the user
+    Get sales figures input from the user.
+    Run a while loop to collect a valid string of data from the user via the terminal, which must be a string of
+    6 numbers separated by commas. The loop will repeatedly request data, until it is valid.
     """
     while True:
         print("Please enter sales data from the last market.")
@@ -35,7 +37,9 @@ def get_sales_data():
         if validate_data(sales_data):
             print("Data is valid!")
             break
-            
+    
+    return sales_data
+        
         
 def validate_data(values):
     """
